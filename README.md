@@ -92,57 +92,6 @@ The platform supports three distinct user roles — **Admin**, **Seller**, and *
 
 ---
 
-## 🗂️ Project Structure
-
-```
-SEU-UNIBUZZ/
-│
-├── index.php                  # Landing / guest marketplace
-├── login.php                  # Login page
-├── logout.php                 # Logout handler
-├── registration.php           # New user registration
-├── signup.php                 # Signup logic
-├── database.php               # Database connection
-│
-├── 🔵 Buyer Pages
-│   ├── buyerHomepage.php      # Buyer dashboard + marketplace
-│   ├── buyerCart.php          # Shopping cart
-│   ├── buyerOrder.php         # Order history
-│   ├── buyerFund.php          # Add wallet funds
-│   ├── buyerIdea.php          # Browse ideas
-│   └── buyerRating.php        # Product detail + rating
-│
-├── 🟢 Seller Pages
-│   ├── sellerHomepage.php     # Seller dashboard + list product
-│   ├── sellerMarketplace.php  # Seller's marketplace view
-│   ├── sellerOrder.php        # Incoming orders
-│   ├── sellerIdeahub.php      # Submit/manage ideas
-│   └── sellerProfile.php      # Seller profile
-│
-├── 🔴 Admin Pages
-│   ├── adminHomepage.php      # Admin dashboard + analytics
-│   ├── adminAllListings.php   # Manage all listings
-│   ├── adminAllOrders.php     # Manage all orders
-│   ├── adminBuyers.php        # Manage buyers
-│   ├── adminSellers.php       # Manage sellers
-│   └── adminIdeas.php         # Moderate ideas
-│
-├── 🌐 Global Pages
-│   ├── marketplaceG.php       # Public marketplace
-│   ├── ideashubG.php          # Public ideas hub
-│   ├── globalChatRoom.php     # Community chat
-│   └── helpAndSupport.html    # Help & support page
-│
-├── 🎨 Stylesheets
-│   ├── index.css, login.css, registration.css
-│   ├── buyerDash.css, sellerDash.css, adminDash.css
-│   ├── globalChatRoom.css, helpAndSupport.css
-│
-└── images/                    # Screenshot assets for README
-```
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -150,36 +99,6 @@ SEU-UNIBUZZ/
 - PHP >= 7.4
 - MySQL / MariaDB
 - Apache or Nginx — **XAMPP / WAMP recommended** for local development
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nahiyan-al-mahin/SEU-UNIBUZZ.git
-   ```
-
-2. **Move to your server's web root**
-   ```bash
-   # Example for XAMPP on Windows
-   mv SEU-UNIBUZZ C:/xampp/htdocs/seu_businesszone
-   ```
-
-3. **Set up the database**
-   - Create a MySQL database (e.g., `seu_unibuzz`)
-   - Import the SQL schema (if provided)
-   - Update `database.php` with your credentials:
-     ```php
-     $host     = "localhost";
-     $user     = "root";
-     $password = "";
-     $dbname   = "seu_unibuzz";
-     ```
-
-4. **Run the project**
-   - Start Apache and MySQL in XAMPP
-   - Open your browser: `http://localhost/seu_businesszone`
-
----
 
 ## 🛠️ Tech Stack
 
@@ -194,16 +113,10 @@ SEU-UNIBUZZ/
 
 ## 👥 Contributors
 
-Made with ❤️ by students of **Southeast University (SEU), Dhaka, Bangladesh**
+Made by students of **Southeast University (SEU), Dhaka, Bangladesh**
+- **Mahin Uddin**
+- **Nusrat Jahan**
+- **Aorpon**
 
 ---
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-  <sub>Built for the SEU community 🎓 · UniBuzz v2.4.1</sub>
-</div>
