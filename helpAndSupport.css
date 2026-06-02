@@ -1,0 +1,405 @@
+:root{
+
+    --maroon:       #7B1C2E;
+    --maroon-deep:  #55101E;
+    --maroon-mid:   #9E2440;
+    --maroon-pale:  #F9F0F2;
+    --maroon-faint: #FDF5F6;
+
+
+    --gold: #c9a84c;
+    --gold-light:#E2C06A;
+    --gold-pale:#FBF6EC;
+    --gold-faint:#FEFBF3;
+
+    --cream:#FAFAF7;
+    --white: #ffffff;
+    --ink:#1A0A0E;
+    --ink-mid:#4A2830;
+    --border: #e8d5d9;
+    --surface: #f4eaed;
+    --muted: #f3e9eb;
+
+    --green:#2E7D4F;
+    --green-pale:#EAF5EF;
+    --blue:#1565C0;
+    --blue-pale:#E3F2FD;
+
+
+
+
+}
+
+
+/* whole page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Outfit',sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+
+/* This is the navber part */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--maroon-mid);
+  border-bottom: 1px solid var(--border);
+  height: 62px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 15px;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  animation: fadeIn 2s ease both;
+}
+
+/* This is to animate navber loading */
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/* Logo navber */
+.nav-logo{
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* vertical line */
+.nav-sep{
+  width: 1px;
+  height: 22px;
+  background: var(--ink);
+  flex-shrink: 0;
+}
+
+/* Tabs stretch */
+.nav-tabs{
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+
+/* individual tabs */
+.nav-tab{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-tab:hover{
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* nav right */
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+
+/* This part is for navber option */
+
+.navbar-option{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--maroon-pale);
+  border-bottom: 1px solid var(--border);
+  height: 40px;
+  gap: 15px;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  animation: fadeIn 2s ease both;
+}
+
+.nav-middle{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 5px;
+}
+
+
+.nav-option{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-option:hover{
+  background: var(--gold-light);
+  color: var(--ink);
+}
+/* Page Shell */
+.about-shell {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 3rem 1.4rem 5rem;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 3.5rem 1rem 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.hero-tag {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent, #c9a84c);
+    border: 1px solid var(--accent, #c9a84c);
+    padding: .28rem .9rem;
+    border-radius: 99px;
+    margin-bottom: 1.2rem;
+}
+.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text, #1a1a1a);
+    margin-bottom: 1.1rem;
+}
+.hero-title em {
+    font-style: italic;
+    color: var(--accent, #c9a84c);
+}
+.hero-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.75;
+    max-width: 620px;
+    margin: 0 auto 2rem;
+}
+.hero-divider {
+    width: 100%;
+    height: 3px;
+    background: var(--maroon-mid);
+    border-radius: 99px;
+    margin: 0 auto;
+}
+
+/* What is UniBuzz */
+.what-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+.what-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e8e2d9);
+    border-radius: 16px;
+    padding: 1.6rem 1.5rem;
+}
+.what-card-icon {
+    font-size: 1.8rem;
+    margin-bottom: .65rem;
+}
+.what-card-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text, #1a1a1a);
+    margin-bottom: .45rem;
+}
+.what-card-text {
+    font-size: .86rem;
+    color: var(--ink);
+    line-height: 1.65;
+}
+
+/* Section Heading */
+.sec-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--text, #1a1a1a);
+    margin-bottom: .3rem;
+}
+.sec-heading em { font-style: italic; color: var(--accent, #c9a84c); }
+.sec-sub-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: .84rem;
+    color: var(--ink);
+    margin-bottom: 1.6rem;
+}
+
+/* Team Cards */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 3.5rem;
+}
+.team-card {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e8e2d9);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform .2s, box-shadow .2s;
+}
+.team-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.07);
+}
+.team-card-img-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, #f5efe6, #ede4d3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.team-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-avatar-fallback {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent, #c9a84c);
+    color: #fff;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.team-card-body {
+    padding: 1.2rem 1rem 1.4rem;
+}
+.team-role-badge {
+    display: inline-block;
+    font-family: 'Outfit', sans-serif;
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--accent, #c9a84c);
+    background: #fdf6e3;
+    border: 1px solid #f0dfa0;
+    padding: .2rem .65rem;
+    border-radius: 99px;
+    margin-bottom: .6rem;
+}
+.team-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text, #1a1a1a);
+    margin-bottom: .2rem;
+}
+.team-id {
+    font-family: 'Outfit', sans-serif;
+    font-size: .78rem;
+    color: var(--ink-mid);
+    margin-bottom: .5rem;
+}
+.team-dept {
+    font-family: 'Outfit', sans-serif;
+    font-size: .82rem;
+    color: var(--ink-mid);
+    font-weight: 500;
+}
+.team-contact {
+    font-family: 'Outfit', sans-serif;
+    font-size: .78rem;
+    color: var(--ink-mid);    
+    margin-top: .3rem;
+    word-break: break-all;
+}
+
+/* Footer */
+.about-footer {
+    background: var(--card-bg, #fff);
+    border: 1px solid var(--border, #e8e2d9);
+    border-radius: 18px;
+    padding: 2.2rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.footer-col-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text, #1a1a1a);
+    margin-bottom: .75rem;
+}
+.footer-col-text {
+    font-family: 'Outfit', sans-serif;
+    font-size: .82rem;
+    color: var(--ink-mid);    
+    line-height: 1.7;
+}
+.footer-col-text a {
+    color: var(--maroon-mid);
+    text-decoration: none;
+}
+.footer-col-text a:hover { text-decoration: underline; }
+.footer-bottom-strip {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: .76rem;
+    color: var(--blue);
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--border, #e8e2d9);
+}
+
+@media(max-width: 680px) {
+    .what-section  { grid-template-columns: 1fr; }
+    .team-grid     { grid-template-columns: 1fr; }
+    .about-footer  { grid-template-columns: 1fr; gap: 1.4rem; }
+    .hero-title    { font-size: 2rem; }
+}

@@ -1,0 +1,377 @@
+/* Color var in one place */
+:root{
+    --maroon-dark: #7A2E25;
+    --gold: #c9a84c;
+    --white: #ffffff;
+    --border: #e8d5d9;
+    --surface: #f4eaed;
+    --text: #1a0a0e;
+    --text-mid: #4a2830;
+    --muted: #8c6b72;
+    --maroon:       #7B1C2E;
+    --maroon-deep:  #55101E;
+    --maroon-mid:   #9E2440;
+    --maroon-pale:  #F9F0F2;
+    --beighe: rgba(214,194,156,0.25);
+    --charcoal: #D6C29C;
+
+
+}
+/* whole page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Poppins',sans-serif;
+}
+
+/* Full Page background */
+.page-bg{
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon) 50%, var(--maroon-deep) 100%); /* SEU ER BUILDING ER COLOR ER DARK VERSION*/
+    display: flex;
+    align-items: center; /*vertical majhe */
+    justify-content: center; /* horizontal majhe */
+    position: relative;
+    overflow: hidden;
+    padding: 40px 20px; /* extra ektu space rakhsi card er jonno */
+} 
+
+/* background shape decoration shudhu */
+.bg-shape{
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+}
+.bg-box{
+    position: absolute;
+    pointer-events: none;
+}
+
+/* ekta circle top left e*/
+.s1{
+    width: 300px;
+    height: 300px;
+    border: 10px solid var(--charcoal);
+    top: -100px;
+    left: -80px;
+}
+
+/*second circle bottom right e*/
+.s2{
+    width: 350px;
+    height: 350px;
+    border: 10px solid var(--charcoal);
+    bottom: -140px;
+    right: -120px;
+}
+/* box deco */
+.s3{
+    width: 240px;
+    height: 240px;
+    border: 8px solid var(--beighe);
+    top: -100px;
+    left:-80px;
+    animation: spin 15s linear infinite;
+}
+
+/* again box deco*/
+.s4{
+    width: 180px;
+    height: 180px;
+    border: 8px solid var(--beighe);
+    bottom: -10px;
+    right: 10px;
+    animation: spin 15s linear infinite;
+
+}
+
+
+/* ekta circle top left e*/
+.s5{
+    width: 300px;
+    height: 300px;
+    border: 10px solid var(--gold);
+    top: 100px;
+    right: -100px;
+}
+
+/*second circle bottom right e*/
+.s6{
+    width: 250px;
+    height: 250px;
+    border: 10px solid var(--maroon-pale);
+    bottom: 140px;
+    left: 20px;
+}
+/* box deco */
+.s7{
+    width: 200px;
+    height: 200px;
+    border: 8px solid var(--maroon-pale);
+    top: 140px;
+    right:80px;
+    animation: spin 15s linear infinite;
+}
+
+/* again box deco*/
+.s8{
+    width: 80px;
+    height: 80px;
+    border: 8px solid var(--maroon-dark);
+    bottom: 140px;
+    left: 20px;
+    animation: spin 15s linear infinite;
+
+}
+
+/* ekta circle top left e*/
+.s9{
+    width: 300px;
+    height: 300px;
+    border: 10px solid var(--charcoal);
+    top: -150px;
+    right: 550px;
+}
+
+/*second circle bottom right e*/
+.s10{
+    width: 250px;
+    height: 250px;
+    border: 10px solid var(--border);
+    bottom: -120px;
+    left: 500px;
+}
+/* box deco */
+.s11{
+    width: 200px;
+    height: 200px;
+    border: 8px solid var(--muted);
+    top: -50px;
+    right:600px;
+    animation: spin 15s linear infinite;
+}
+
+/* again box deco*/
+.s12{
+    width: 200px;
+    height: 200px;
+    border: 8px solid var(--text-mid);
+    bottom: -100px;
+    left: 520px;
+    animation: spin 15s linear infinite;
+
+}
+
+
+
+
+/* box animation */
+@keyframes spin {
+    to {transform: rotate(360deg);}
+    
+}
+
+/* login card */
+.login-card{
+    background: var(--white);
+    width: 100%;
+    max-width: 450px; /* card er size eita*/
+    border-radius: 16px;
+    padding: 36px 38px 28px; /* ashepashe space */
+    position: relative;
+    z-index: 10;
+    box-shadow: 10px 20px 64px rgba(0,0,0,0.4);
+}
+
+/* southeast logo design */
+.card-logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.logo-box{
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    background: var(--white);
+    overflow: hidden;
+    display: flex;
+    box-shadow: 0 4px 14px rgba(201,168,76,0.38);
+}
+
+/* brand name text */
+.brand-name{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+/* university name text */
+.brand-sub{
+    font-size: 14px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 3px;
+}
+
+/* divider line */
+.divider{
+    height: 3px;
+    background: var(--border);
+    margin-bottom: 22px;
+}
+
+/* welcome heading */
+.card-heading{
+    font-family: 'Playfair Display',serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: 2;
+    line-height: 1.5;
+} 
+
+.card-subtext{
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 6px;
+    margin-bottom: 24px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+/* form inputs */
+
+.input-block{
+    margin-bottom: 14px;
+}
+
+/* label */
+.input-block label{
+    display: block; /* to display up and down */
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-mid);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+/* input block input */
+.input-block input{
+    width: 100%;
+    padding: 10px 13px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    outline: none;
+    color: var(--text);
+}
+
+/* click korar por input box er transformation */
+.input-block input:focus{
+    border-color: var(--maroon);
+    background: var(--white);
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.4);
+}
+
+/*forgot password */
+ .forgot-pass{
+    display: flex;
+    justify-content: flex-end; /*to move right side */
+    margin-top: -4px;
+    margin-bottom: 20px;
+}
+
+.forgot-pass a{
+    font-size: 14px;
+    color: var(--maroon);
+    font-weight: 500;
+    text-decoration: none;
+}
+.forgot-pass a:hover{
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* sign in button */
+
+.signin-btn{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, var(--maroon)0%,var(--maroon-dark)100%);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 2px 5px 10px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+}
+
+.signin-btn:hover{
+    transform: translateY(-2px);
+}
+
+/* new account */
+
+.new-account{
+    text-align: center;
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--muted);
+    font-weight: 300;
+}
+
+.new-account a{
+    color: var(--maroon);
+    font-weight: 600;
+    text-decoration: none;
+    padding-bottom: 1px;
+    padding-left: 15px;
+}
+
+/* card footer */
+
+.card-footer{
+    text-align: center;
+    margin-top: 22px;
+    padding-top: 16px;
+    border-top: 2px solid rgba(0,0,0,0.4);
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.card-footer strong{
+    color: var(--maroon);
+    font-weight: 600;
+}
+
+/* responsive phone er jonno */
+@media (max-width: 480px) {
+    .login-card{
+        padding: 28px 22px 22px;
+        border-radius: 12px;
+    }
+
+    .card-heading{
+        font-size: 20px;
+    }
+}

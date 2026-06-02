@@ -1,0 +1,552 @@
+/* Color var in one place */
+:root{
+
+    --maroon:       #7B1C2E;
+    --maroon-deep:  #55101E;
+    --maroon-mid:   #9E2440;
+    --maroon-pale:  #F9F0F2;
+    --maroon-faint: #FDF5F6;
+
+
+    --gold: #c9a84c;
+    --gold-light:#E2C06A;
+    --gold-pale:#FBF6EC;
+    --gold-faint:#FEFBF3;
+
+    --cream:#FAFAF7;
+    --white: #ffffff;
+    --ink:#1A0A0E;
+    --ink-mid:#4A2830;
+    --border: #e8d5d9;
+    --surface: #f4eaed;
+    --muted: #f3e9eb;
+
+    --green:#2E7D4F;
+    --green-pale:#EAF5EF;
+    --blue:#1565C0;
+    --blue-pale:#E3F2FD;
+
+
+
+
+}
+/* whole page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Outfit',sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+}
+
+
+/* This is the navber part */
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--maroon-mid);
+  border-bottom: 1px solid var(--border);
+  height: 62px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 15px;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  animation: fadeIn 2s ease both;
+}
+
+/* This is to animate navber loading */
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/* Logo navber */
+.nav-logo{
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+/* vertical line */
+.nav-sep{
+  width: 1px;
+  height: 22px;
+  background: var(--ink);
+  flex-shrink: 0;
+}
+
+/* Tabs stretch */
+.nav-tabs{
+  display: flex;
+  gap: 5px;
+  flex: 1;
+}
+
+/* individual tabs */
+.nav-tab{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-tab:hover{
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* nav right */
+.nav-right{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+
+/* This part is for navber option */
+
+.navbar-option{
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--maroon-pale);
+  border-bottom: 1px solid var(--border);
+  height: 40px;
+  gap: 15px;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  animation: fadeIn 2s ease both;
+}
+
+.nav-middle{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding: 5px;
+}
+
+
+.nav-option{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-option:hover{
+  background: var(--gold-light);
+  color: var(--ink);
+}
+
+/* page shell */
+
+.page-shell{
+  animation: fadeUp .5s ease .1s both;
+}
+
+@keyframes fadeUp {
+  from{
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app-content{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 20px 20px 40px;
+}
+
+.panel-market{
+  display: block;
+}
+
+
+/* section head */
+
+.sec-head{
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+/* section head title */
+
+.sec-title{
+  font-family: 'Cormorant Garamond',serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+
+/* section sub */
+.sec-sub{
+  font-size: 14px;
+  color: var(--ink-mid);
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+/* controls row that holds the search box and sort dropdown side by side */
+
+.controls-bar{
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* search warp takes up remaining space in row */
+
+.search-warp{
+  flex: 1;
+  min-width: 200px;
+  position: relative;
+}
+
+/* the input of search */
+ .search-warp input{
+  width: 100%;
+  padding: 8px 10px 8px 20px;
+  background: var(--white);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  transition: border .2s;
+ }
+
+ .search-warp input:focus{
+  border-color: var(--maroon);
+  box-shadow: 0 0 0 3px rgba(123,28,46,0.07);
+ }
+
+ .search-warp input::placeholder{
+  color: var(--ink-mid);
+  font-weight: 300;
+ }
+
+ /* sort dropdown */
+
+ .sort-select{
+  padding: 8px 10px 8px 20px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: border .2s;
+ }
+
+
+ /* button of submit search */
+
+ .button-submit{
+  padding: 8px 10px 8px 20px;
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  transition: border .2s;
+}
+
+/* horizontal line */
+.search-sep{
+  margin-top: 2px;
+  width: 100%;
+  height: 1px;
+  background: var(--ink);
+  flex-shrink: 2;
+}
+.search-sep2{
+  margin-top: 30px;
+  width: 100%;
+  height: 1px;
+  background: var(--ink);
+  flex-shrink: 2;
+}
+.search-sep3{
+  margin-top: 2px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 1px;
+  background: var(--ink);
+  flex-shrink: 2;
+}
+
+/* product grid */
+
+.products-grid{
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+  gap: 10px;
+}
+
+/* individual products card */
+
+.pcard{
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  transition: all .25s;
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp .4s ease both;
+}
+.pcard:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  border-color: var(--blue);
+}
+
+
+/* product body */
+
+.pcard-body{
+  padding: 16px 18px 20px;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* product name */
+
+.pcard-name{
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--ink);
+  line-height: 1.3;
+}
+
+/* product seller */
+
+.pcard-seller{
+  font-size: 12px;
+  color: var(--ink-mid);
+  font-weight: 300;
+}
+
+.pcard-seller strong{
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* product stars */
+
+.pcard-stars{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stars-display{
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+}
+.stars-count{
+  font-size: 12px;
+  color: var(--ink-mid);
+}
+
+/* product footer */
+
+.pcard-footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+/* product image */
+
+.pcard-img{
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+}
+/* This is to input the image correct way*/
+.pcard-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /*This is to fill the img*/
+}
+
+/* ideas hub grid */
+
+.ideas-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+  gap:40px;
+}
+
+/* ideas hub individual ideas */
+
+.icard{
+  background: var(--blue-pale);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  transition: all .25s;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  animation: fadeUp .4s ease both;
+}
+
+.icard:hover{
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  transform: translateY(-3px);
+  border-color: var(--blue);
+}
+
+/* dash line */
+
+.dashed{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 0.5px;
+  border-top: 1.5px dashed;
+}
+
+/* idea title and subline */
+
+.icard-title{
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.icard-desc{
+  color: var(--ink-mid);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* idea funder */
+
+.icard-founder{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* idea funder name and dept */
+
+.icard-founder-name{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.icard-founder-dept{
+  font-size: 12px;
+  font-weight: 300;
+  color: var(--ink-mid);
+}
+
+/* funding bar */
+
+.fund-bar-warp{
+  margin-top: 6px;
+}
+.fund-meta{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--ink-mid);
+  margin-bottom: 6px;
+}
+.fund-meta strong{
+  color: var(--ink);
+  font-weight: 600;
+}
+.fund-bar{
+  height: 10px;
+  background: var(--surface);
+  border-radius: 100px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.fund-fill{
+  height: 100%;
+  border-radius: 100px;
+  background: var(--green);
+}
+
+
+/* This is the footer part */
+.footer{
+  position: sticky;
+  background: var(--maroon-mid);
+  border-bottom: 1px solid var(--border);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(123,28,46,0.07);
+  animation: fadeIn 2s ease both;
+}
+
+.web-name{
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: 5px;
+}
