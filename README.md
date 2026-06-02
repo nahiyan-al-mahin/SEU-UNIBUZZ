@@ -92,57 +92,6 @@ The platform supports three distinct user roles — **Admin**, **Seller**, and *
 
 ---
 
-## 🗂️ Project Structure
-
-```
-SEU-UNIBUZZ/
-│
-├── index.php                  # Landing / guest marketplace
-├── login.php                  # Login page
-├── logout.php                 # Logout handler
-├── registration.php           # New user registration
-├── signup.php                 # Signup logic
-├── database.php               # Database connection
-│
-├── 🔵 Buyer Pages
-│   ├── buyerHomepage.php      # Buyer dashboard + marketplace
-│   ├── buyerCart.php          # Shopping cart
-│   ├── buyerOrder.php         # Order history
-│   ├── buyerFund.php          # Add wallet funds
-│   ├── buyerIdea.php          # Browse ideas
-│   └── buyerRating.php        # Product detail + rating
-│
-├── 🟢 Seller Pages
-│   ├── sellerHomepage.php     # Seller dashboard + list product
-│   ├── sellerMarketplace.php  # Seller's marketplace view
-│   ├── sellerOrder.php        # Incoming orders
-│   ├── sellerIdeahub.php      # Submit/manage ideas
-│   └── sellerProfile.php      # Seller profile
-│
-├── 🔴 Admin Pages
-│   ├── adminHomepage.php      # Admin dashboard + analytics
-│   ├── adminAllListings.php   # Manage all listings
-│   ├── adminAllOrders.php     # Manage all orders
-│   ├── adminBuyers.php        # Manage buyers
-│   ├── adminSellers.php       # Manage sellers
-│   └── adminIdeas.php         # Moderate ideas
-│
-├── 🌐 Global Pages
-│   ├── marketplaceG.php       # Public marketplace
-│   ├── ideashubG.php          # Public ideas hub
-│   ├── globalChatRoom.php     # Community chat
-│   └── helpAndSupport.html    # Help & support page
-│
-├── 🎨 Stylesheets
-│   ├── index.css, login.css, registration.css
-│   ├── buyerDash.css, sellerDash.css, adminDash.css
-│   ├── globalChatRoom.css, helpAndSupport.css
-│
-└── images/                    # Screenshot assets for README
-```
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -165,9 +114,9 @@ SEU-UNIBUZZ/
 ## 👥 Contributors
 
 Made by students of **Southeast University (SEU), Dhaka, Bangladesh**
-**Mahin Uddin**
-**Nusrat Jahan**
-**Aorpon**
+- **Mahin Uddin**
+- **Nusrat Jahan**
+- **Aorpon**
 
 ---
 
