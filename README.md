@@ -151,36 +151,6 @@ SEU-UNIBUZZ/
 - MySQL / MariaDB
 - Apache or Nginx — **XAMPP / WAMP recommended** for local development
 
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/nahiyan-al-mahin/SEU-UNIBUZZ.git
-   ```
-
-2. **Move to your server's web root**
-   ```bash
-   # Example for XAMPP on Windows
-   mv SEU-UNIBUZZ C:/xampp/htdocs/seu_businesszone
-   ```
-
-3. **Set up the database**
-   - Create a MySQL database (e.g., `seu_unibuzz`)
-   - Import the SQL schema (if provided)
-   - Update `database.php` with your credentials:
-     ```php
-     $host     = "localhost";
-     $user     = "root";
-     $password = "";
-     $dbname   = "seu_unibuzz";
-     ```
-
-4. **Run the project**
-   - Start Apache and MySQL in XAMPP
-   - Open your browser: `http://localhost/seu_businesszone`
-
----
-
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
@@ -194,16 +164,10 @@ SEU-UNIBUZZ/
 
 ## 👥 Contributors
 
-Made with ❤️ by students of **Southeast University (SEU), Dhaka, Bangladesh**
+Made by students of **Southeast University (SEU), Dhaka, Bangladesh**
+**Mahin Uddin**
+**Nusrat Jahan**
+**Aorpon**
 
 ---
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-<div align="center">
-  <sub>Built for the SEU community 🎓 · UniBuzz v2.4.1</sub>
-</div>
